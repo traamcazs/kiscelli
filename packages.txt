@@ -2,3 +2,4 @@ ssh
 sshpass
 mpv
 parallel
+python3
