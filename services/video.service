@@ -1,0 +1,7 @@
+[Unit]
+Description=Start video playing on boot
+[Service]
+ExecStart=/bin/play
+
+[Install]
+WantedBy=multi-user.target

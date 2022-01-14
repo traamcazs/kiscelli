@@ -1,0 +1,9 @@
+[Unit]
+Description=Shutdown RPi at button push
+After=Network.target
+
+[Service]
+ExecStart=/bin/shutdown
+
+[Install]
+WantedBy=multi-user.target
