@@ -1,0 +1,3 @@
+#! /bin/bash
+
+sshpass -p "Gaspar2003" ssh pi@raspberrypi.local sudo shutdown -P now
