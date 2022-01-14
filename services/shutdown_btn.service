@@ -1,0 +1,9 @@
+[Unit]
+Description=Shutdown RPi after 3 sec of button pushed
+After=Network.target
+
+[Service]
+ExecStart=/bin/shutdown_btn.py &
+
+[Install]
+WantedBy=multi-user.target
