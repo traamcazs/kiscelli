@@ -2,6 +2,8 @@
 Description=Start video playing on boot
 [Service]
 ExecStart=/bin/play
+Restart=always
+RestartSec=10
 
 [Install]
 WantedBy=multi-user.target

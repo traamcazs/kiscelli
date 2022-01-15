@@ -1,2 +1,2 @@
 #! /bin/bash
-parallel -u ::: './play3' './play4'
+parallel -u ::: '/bin/monitor1' '/bin/monitor2'

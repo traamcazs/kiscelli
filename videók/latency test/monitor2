@@ -1,2 +1,2 @@
 #! /bin/bash
-mpv timer.mp4 --fs --volume=0 --loop-file --screen=1
+mpv /home/pi/Videos/timer.mp4 --fs --volume=0 --loop-file --screen=1
