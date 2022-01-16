@@ -1,0 +1,11 @@
+[Unit]
+Description=Start motion detect
+After=Network.target
+
+[Service]
+ExecStart=/ome/pi/kiscelli/motion_sensor/motion_sensor.py &
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
