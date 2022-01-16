@@ -1,0 +1,2 @@
+#! /bin/bash
+mpv /home/pi/Videos/timer.mp4 --fs --vol 0 --loop --display 0
