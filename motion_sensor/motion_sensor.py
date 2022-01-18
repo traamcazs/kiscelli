@@ -8,10 +8,10 @@ pir.wait_for_no_motion()
 print("Sensor is ready")
 
 def detected():
-    subprocess.call("/bin/play")
+    subprocess.run("/bin/play")
 
 while True:
     pir.wait_for_active
     detected()
-    subprocess.call("/bin/play")
+    subprocess.run("/bin/play")
     time.sleep(60)
