@@ -3,7 +3,7 @@ Description=Start motion detect
 After=Network.target
 
 [Service]
-ExecStart=/ome/pi/kiscelli/motion_sensor/motion_sensor.py &
+ExecStart=/home/pi/kiscelli/motion_sensor/motion_sensor.py &
 Restart=always
 RestartSec=10
 
