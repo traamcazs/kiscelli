@@ -1,3 +1,0 @@
-#! /bin/bash
-
-parallel -u ::: '/bin/monitor1' '/bin/monitor2'

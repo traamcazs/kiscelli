@@ -1,1 +1,33 @@
 #! /bin/bash
+
+echo "Megváltoztattad a videó nevét a motion_sensor.py - ban vagy a video.service -ben? (igen|nem)"
+read ready
+if [$ready = "nem"]; then
+    exit 0
+fi
+sudo apt install -y $(cat packages.txt)
+# Shutdown button
+sudo cp /home/pi/kiscelli/services/shutdown_btn.service /etc/systemd/system
+sudo chmod +x /etc/systemd/system/shutdown_btn.service
+sudo chmod +x /home/pi/kiscelli/shutdown/shutdown_btn.py
+sudo systemctl enable shutdown_btn.service
+
+echo "Szeretnéd telepíteni a mozgásérzékelőt? (igen|nem)"
+read motion
+if [$motion = "igen"]; then
+    # Motion sensor
+    sudo cp /home/pi/kiscelli/services/motion_detect.service /etc/systemd/system
+    sudo chmod +x /etc/systemd/system/motion_detect.service
+    sudo chmod +x /home/pi/kiscelli/motion_sensor/motion_sensor.py
+    sudo systemctl enable motion_detect.service
+fi
+
+echo "Szeretnéd telepíteni a videólejátszót? (igen|nem)"
+read play
+if [play = "igen"]; then
+    # Video play
+    sudo cp /home/pi/kiscelli/services/video.service /etc/systemd/system
+    sudo chmod +x /etc/systemd/system/video.service
+    sudo systemctl enable video.service
+fi
+exit 0

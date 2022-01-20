@@ -1,7 +1,7 @@
 [Unit]
 Description=Start video playing on boot
 [Service]
-ExecStart=/bin/play
+ExecStart=parallel -u ::: 'omxplayer /home/pi/Videos/timer.mp4 --loop' 'omxplayer /home/pi/Videos/timer.mp4 --loop'
 Restart=always
 RestartSec=10
 [Install]
