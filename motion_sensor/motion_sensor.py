@@ -1,7 +1,7 @@
 from gpiozero import MotionSensor
 import subprocess
 
-pir = MotionSensor(21)
+pir = MotionSensor(14)
 
 pir.wait_for_no_motion()
 print("Sensor is ready")

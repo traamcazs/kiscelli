@@ -3,7 +3,7 @@ Description=Shutdown RPi after 3 sec of button pushed
 After=Network.target
 
 [Service]
-ExecStart=/bin/shutdown_btn.py &
+ExecStart=/home/pi/kiscelli/shutdown/shutdown_btn.py &
 Restart=always
 RestartSec=10
 
