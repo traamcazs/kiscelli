@@ -31,7 +31,7 @@ if [ "$play" = "igen" ]; then
     #sudo chmod +x /etc/systemd/system/video.service
     #sudo systemctl enable video.service
     sudo mkdir -p /etc/xdg/autostart/
-    sudo cp /home/pi/kiscelli/videók/autostart/video.desktop /etc/xdg/autostart/
+    sudo cp /home/pi/kiscelli/videok/autostart/video.desktop /etc/xdg/autostart/
     echo "Videólejátszó service telepítve"
 fi
 exit 0
