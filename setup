@@ -27,9 +27,11 @@ echo "Szeretnéd telepíteni a videólejátszót? (igen|nem)"
 read play
 if [ "$play" = "igen" ]; then
     # Video play
-    sudo cp /home/pi/kiscelli/services/video.service /etc/systemd/system
-    sudo chmod +x /etc/systemd/system/video.service
-    sudo systemctl enable video.service
+    #sudo cp /home/pi/kiscelli/services/video.service /etc/systemd/system
+    #sudo chmod +x /etc/systemd/system/video.service
+    #sudo systemctl enable video.service
+    sudo mkdir -p /etc/xdg/autostart/
+    sudo cp /home/pi/kiscelli/videók/autostart/video.desktop /etc/xdg/autostart/
     echo "Videólejátszó service telepítve"
 fi
 exit 0

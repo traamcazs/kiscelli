@@ -1,0 +1,3 @@
+[Desktop Entry]
+Name=Play a video
+Exec=mpv --fs
