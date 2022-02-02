@@ -1,0 +1,4 @@
+@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
+@xscreensaver -no-splash
+@python3 /home/pi/kiscellli/motion_sensor/motion_sensor.py &
