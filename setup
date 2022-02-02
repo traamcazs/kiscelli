@@ -16,22 +16,31 @@ echo "Szeretnéd telepíteni a mozgásérzékelőt? (igen|nem)"
 read motion
 if [ "$motion" = "igen" ]; then
     # Motion sensor
-    sudo cp /home/pi/kiscelli/services/motion_detect.service /etc/systemd/system
-    sudo chmod +x /etc/systemd/system/motion_detect.service
-    sudo chmod +x /home/pi/kiscelli/motion_sensor/motion_sensor.py
-    sudo systemctl enable motion_detect.service
-    echo "Mozgásérzékelő service telepítve"
+    /home/pi/kiscelli/autostart/python/setup
+    echo "Mozgásérzékelő telepítve"
 fi
 
 echo "Szeretnéd telepíteni a videólejátszót? (igen|nem)"
 read play
 if [ "$play" = "igen" ]; then
     # Video play
-    #sudo cp /home/pi/kiscelli/services/video.service /etc/systemd/system
-    #sudo chmod +x /etc/systemd/system/video.service
-    #sudo systemctl enable video.service
-    sudo mkdir -p /etc/xdg/autostart/
-    sudo cp /home/pi/kiscelli/videok/autostart/video.desktop /etc/xdg/autostart/
-    echo "Videólejátszó service telepítve"
+    /home/pi/kiscelli/autostart/video/setup
+    echo "Videólejátszó telepítve"
 fi
+
+echo "Szeretnéd telepíteni a torztükröt? (igen|nem)"
+read tukor
+if [ "$tukor" = "igen" ]; then
+    # Torztükör
+    /home/pi/kiscelli/autostart/chromium/setup
+    echo "Torztükör telepítve"
+fi
+
+echo "Szeretnéd újraindítani a málnát? (igen|nem)"
+read restart
+if [ "$restart" = "igen" ]; then
+    # Reboot
+    sudo reboot
+fi
+
 exit 0

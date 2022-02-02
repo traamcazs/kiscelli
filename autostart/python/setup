@@ -2,5 +2,5 @@
 mkdir /home/pi/.config/lxsession
 mkdir /home/pi/.config/lxsession/LXDE-pi
 cp /etc/xdg/lxsession/LXDE-pi/autostart /home/pi/.config/lxsession/LXDE-pi/
-cp /home/pi/kiscellli/autostart/python/autostart /home/pi/.config/lxsession/LXDE-pi/
+cp /home/pi/kiscelli/autostart/python/autostart /home/pi/.config/lxsession/LXDE-pi/
 
