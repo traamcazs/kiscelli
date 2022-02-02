@@ -1,6 +1,5 @@
 ssh
 sshpass
-omxplayer
 mpv
 parallel
 python3
